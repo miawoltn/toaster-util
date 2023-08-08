@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.github.miawoltn"
-version = "0.1.13"
+version = "0.1.14"
 
 android {
     namespace = "com.miawoltn.toasterlibrary"
@@ -62,13 +62,15 @@ dependencies {
 afterEvaluate {
     publishing {
         publications {
-//            // Creates a Maven publication called "release".
-//            release(MavenPublication) {
-//                from components.release
-//                groupId = 'com.github.jitpack'
-//                artifactId = 'android-example'
-//                version = '1.0'
-//            }
+            register<MavenPublication>("release") {
+                groupId = "com.github.miawoltn"
+                artifactId = "ToasterLibrary"
+                version = "0.1.14"
+
+                afterEvaluate {
+                    from(components["release"])
+                }
+            }
         }
     }
 }
