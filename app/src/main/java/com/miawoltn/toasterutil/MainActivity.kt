@@ -2,6 +2,7 @@ package com.miawoltn.toasterutil
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.miawoltn.toasterlibrary.ToasterMessage
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
