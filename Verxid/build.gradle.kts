@@ -5,7 +5,7 @@ plugins {
 }
 
 
-group = "com.github.miawoltn"
+group = "com.verxid.sdk"
 version = "0.1"
 
 android {
@@ -56,9 +56,9 @@ afterEvaluate {
     publishing {
         publications {
             register<MavenPublication>("release") {
-                groupId = "com.github.miawoltn"
+                groupId = group.toString()
                 artifactId = "Verxid"
-                version = "0.1.14"
+                version = version
 
                 afterEvaluate {
                     from(components["release"])
