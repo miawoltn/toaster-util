@@ -12,6 +12,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/ToasterLibrary" />
+            <option value="$PROJECT_DIR$/Verxid" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>

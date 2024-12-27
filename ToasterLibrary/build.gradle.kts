@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.github.miawoltn"
-version = "0.1.14"
+version = "0.1.15"
 
 android {
     namespace = "com.miawoltn.toasterlibrary"
@@ -57,15 +57,20 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+
+    implementation(group = "com.identy.app", name = "finger", version = "5.7.2", ext = "aar")
+    implementation(group = "com.identy.face", name=  "face", version = "4.11.2", ext = "aar")
+    implementation(group = "com.identy.docscan", name = "ocr", version = "2.16.0", ext = "aar")
 }
 
 afterEvaluate {
     publishing {
         publications {
             register<MavenPublication>("release") {
-                groupId = "com.github.miawoltn"
+                groupId = group.toString()
                 artifactId = "ToasterLibrary"
-                version = "0.1.14"
+                version = version
 
                 afterEvaluate {
                     from(components["release"])
