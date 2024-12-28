@@ -38,4 +38,3 @@ dependencyResolutionManagement {
 rootProject.name = "ToasterUtil"
 include(":app")
 include(":ToasterLibrary")
-include(":Verxid")

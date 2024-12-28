@@ -249,7 +249,7 @@ class SDKHelper private constructor(private var activity: Activity) {
                                     val icaoCheckResults = response.icaoPrints.icaoResult
                                     logger.info(icaoCheckResults.toJson().toString())
                                     val multipleFaces = icaoCheckResults.multiple_faces
-                                    val eyeFullVisibility = icaoCheckResults.eyes_full_visibility
+//                                    val eyeFullVisibility = icaoCheckResults.eyes_full_visibility
                                     val rightEyeVisibility = icaoCheckResults.eyeR_visibility
                                     val leftEyeVisibility = icaoCheckResults.eyeL_visibility
                                     val mouthVisibility = icaoCheckResults.mouth_visibility

@@ -5,7 +5,7 @@ plugins {
 }
 
 
-group = "com.miawoltn.verxid"
+group = "com.github.miawoltn"
 version = "0.1"
 
 android {
@@ -52,18 +52,18 @@ dependencies {
     implementation(group = "com.identy.docscan", name = "ocr", version = "2.16.0", ext = "aar")
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            register<MavenPublication>("release") {
-                groupId = group.toString()
-                artifactId = "Verxid"
-                version = version
-
-                afterEvaluate {
-                    from(components["release"])
-                }
-            }
-        }
-    }
-}
+//afterEvaluate {
+//    publishing {
+//        publications {
+//            register<MavenPublication>("release") {
+//                groupId = group.toString()
+//                artifactId = "Verxid"
+//                version = version
+//
+//                afterEvaluate {
+//                    from(components["release"])
+//                }
+//            }
+//        }
+//    }
+//}
