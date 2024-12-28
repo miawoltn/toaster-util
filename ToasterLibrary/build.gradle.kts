@@ -10,13 +10,18 @@ version = "0.1.15"
 
 android {
     namespace = "com.miawoltn.toasterlibrary"
-    compileSdk = 33
+    compileSdk = 32
 
     defaultConfig {
         minSdk = 24
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+        externalNativeBuild {
+            cmake {
+                cppFlags("")
+            }
+        }
     }
 
     buildTypes {
@@ -54,7 +59,6 @@ dependencies {
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
-    implementation(project(mapOf("path" to ":Verxid")))
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
