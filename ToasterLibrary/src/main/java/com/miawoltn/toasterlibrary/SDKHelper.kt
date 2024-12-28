@@ -23,8 +23,8 @@ import com.identy.face.enums.UIOption
 import com.identy.face.exception.LicenseValidationException
 import com.identy.ocr.DocScanType
 import com.identy.ocr.IdentyOCRSdk
-import com.miawoltn.verxid.FileCodecBase64
-import com.miawoltn.verxid.Logger
+import com.miawoltn.toasterlibrary.FileCodecBase64
+import com.miawoltn.toasterlibrary.Logger
 import com.touchlessid.VerxidSDK
 import java.io.ByteArrayOutputStream
 import java.io.File

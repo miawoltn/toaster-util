@@ -5,7 +5,7 @@ plugins {
 }
 
 
-group = "com.verxid.sdk"
+group = "com.miawoltn.verxid"
 version = "0.1"
 
 android {
