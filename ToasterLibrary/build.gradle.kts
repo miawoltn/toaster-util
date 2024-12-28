@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.github.miawoltn"
-version = "0.1.17"
+version = "0.1.18"
 
 android {
     namespace = "com.miawoltn.toasterlibrary"
@@ -51,6 +51,33 @@ android {
             withSourcesJar()
             withJavadocJar()
         }
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven( "https://identy.jfrog.io/identy/identy-face-release") {
+            credentials {
+                username = "barnksfortegroup"
+                password = "cHv16Vt%8fYG8j^4*xcT3"
+            }
+        }
+        maven( "https://identy.jfrog.io/identy/identy-finger-release") {
+            credentials {
+                username = "barnksfortegroup"
+                password = "cHv16Vt%8fYG8j^4*xcT3"
+            }
+        }
+        maven( "https://identy.jfrog.io/identy/identy-ocr-release") {
+            credentials {
+                username = "barnksfortegroup"
+                password = "cHv16Vt%8fYG8j^4*xcT3"
+            }
+        }
+        maven("https://dl.bintray.com/guardian/android")
+        maven ("https://jitpack.io")
     }
 }
 
