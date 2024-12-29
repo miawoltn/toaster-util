@@ -1,6 +1,15 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript{
+    dependencies {
+        classpath("com.github.kezong:fat-aar:1.3.8")
+    }
+}
+
 plugins {
     id("com.android.application") version "7.2.0" apply false
     id("org.jetbrains.kotlin.android") version "1.6.21" apply false
     id("com.android.library") version "7.2.0" apply false
+    id("java-gradle-plugin")
+//    id("org.gradle.kotlin.kotlin-dsl") version "2.4.0"
 }
