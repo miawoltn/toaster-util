@@ -8,7 +8,7 @@ plugins {
 
 
 group = "com.github.miawoltn"
-version = "0.1.19"
+version = "0.1.20"
 
 //buildscript {
 //    repositories {
@@ -151,9 +151,15 @@ dependencies {
 //        exclude("com.identy.docscan", "**/*.so")
 //    }
 
-    implementation("com.identy.app:finger:5.7.2@aar")
-    implementation("com.identy.face:face:4.11.2@aar")
-    implementation("com.identy.docscan:ocr:2.16.0@aar")
+    implementation("com.identy.app:finger:5.7.2@aar"){
+        isTransitive = true // Ensure transitive dependencies are included
+    }
+    implementation("com.identy.face:face:4.11.2@aar"){
+        isTransitive = true // Ensure transitive dependencies are included
+    }
+    implementation("com.identy.docscan:ocr:2.16.0@aar"){
+        isTransitive = true // Ensure transitive dependencies are included
+    }
 
 //    implementation("com.github.kezong:fat-aar:1.3.8")
 }
