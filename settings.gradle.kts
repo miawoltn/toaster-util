@@ -46,16 +46,13 @@ dependencyResolutionManagement {
 //            }
 //        }
         maven {
-            url = uri("http://localhost:8081/nexus/content/repositories/verxid-face/")
-            isAllowInsecureProtocol = true
+            url = uri("https://a146-169-150-218-73.ngrok-free.app/nexus/content/repositories/verxid-face/")
         }
         maven {
-            url = uri("http://localhost:8081/nexus/content/repositories/verxid-finger/")
-            isAllowInsecureProtocol = true
+            url = uri("https://a146-169-150-218-73.ngrok-free.app/nexus/content/repositories/verxid-finger/")
         }
         maven {
-            url = uri("http://localhost:8081/nexus/content/repositories/verxid-ocr/")
-            isAllowInsecureProtocol = true
+            url = uri("https://a146-169-150-218-73.ngrok-free.app/nexus/content/repositories/verxid-ocr/")
         }
         maven("https://dl.bintray.com/guardian/android")
         maven ("https://jitpack.io")
