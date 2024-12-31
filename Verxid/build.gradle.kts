@@ -46,10 +46,6 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
-
-    implementation(group = "com.identy.app", name = "finger", version = "5.7.2", ext = "aar")
-    implementation(group = "com.identy.face", name=  "face", version = "4.11.2", ext = "aar")
-    implementation(group = "com.identy.docscan", name = "ocr", version = "2.16.0", ext = "aar")
 }
 
 //afterEvaluate {

@@ -1,0 +1,3 @@
+-keep class com.identy.** { *; }
+-keepclassmembers class com.identy.** { *; }
+-dontwarn com.identy.**

@@ -10,6 +10,4 @@ plugins {
     id("com.android.application") version "7.2.0" apply false
     id("org.jetbrains.kotlin.android") version "1.6.21" apply false
     id("com.android.library") version "7.2.0" apply false
-    id("java-gradle-plugin")
-//    id("org.gradle.kotlin.kotlin-dsl") version "2.4.0"
 }

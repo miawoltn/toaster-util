@@ -8,7 +8,7 @@ plugins {
 
 
 group = "com.github.miawoltn"
-version = "0.1.20"
+version = "0.1.21"
 
 //buildscript {
 //    repositories {
@@ -45,6 +45,10 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+
+            packagingOptions {
+                jniLibs.pickFirsts.add("**/*.so")
+            }
         }
     }
     compileOptions {
@@ -64,9 +68,6 @@ android {
         multipleVariants {
             withSourcesJar()
             withJavadocJar()
-            packagingOptions {
-                jniLibs.pickFirsts.add("**/*.so")
-            }
         }
 
         packagingOptions {
@@ -144,20 +145,20 @@ dependencies {
 
 
 //    embed(group = "com.identy.app", name = "finger", version = "5.7.2", ext = "aar") {
-//        exclude("com.identy.app", "**/*.so")
+//       isTransitive = true
 //    }
 //    embed(group = "com.identy.face", name=  "face", version = "4.11.2", ext = "aar")
 //    embed(group = "com.identy.docscan", name = "ocr", version = "2.16.0", ext = "aar") {
-//        exclude("com.identy.docscan", "**/*.so")
+//
 //    }
 
-    implementation("com.identy.app:finger:5.7.2@aar"){
+    api("com.identy.app:finger:5.7.2@aar"){
         isTransitive = true // Ensure transitive dependencies are included
     }
-    implementation("com.identy.face:face:4.11.2@aar"){
+    api("com.identy.face:face:4.11.2@aar"){
         isTransitive = true // Ensure transitive dependencies are included
     }
-    implementation("com.identy.docscan:ocr:2.16.0@aar"){
+    api("com.identy.docscan:ocr:2.16.0@aar"){
         isTransitive = true // Ensure transitive dependencies are included
     }
 
