@@ -1,3 +1,4 @@
+import org.gradle.internal.impldep.org.junit.experimental.categories.Categories.CategoryFilter.include
 
 plugins {
     id("com.android.library")
@@ -8,17 +9,7 @@ plugins {
 
 
 group = "com.github.miawoltn"
-version = "0.1.21"
-
-//buildscript {
-//    repositories {
-//        mavenCentral()
-//    }
-//    dependencies {
-//        classpath("com.github.kezong:fat-aar:1.3.8")
-//    }
-//}
-
+version = "0.1.22"
 
 android {
     namespace = "com.miawoltn.toasterlibrary"
@@ -45,10 +36,6 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-
-            packagingOptions {
-                jniLibs.pickFirsts.add("**/*.so")
-            }
         }
     }
     compileOptions {
@@ -69,70 +56,13 @@ android {
             withSourcesJar()
             withJavadocJar()
         }
-
-        packagingOptions {
-            jniLibs.pickFirsts.add("**/*.so")
-        }
     }
 
     packagingOptions {
         jniLibs.pickFirsts.add("**/*.so")
     }
 
-//    packagingOptions {
-//        resources {
-//            excludes += "lib/x86/*.so"
-//            excludes += "lib/x86_64/*.so"
-//            excludes += "lib/armeabi/*.so"
-//            excludes += "lib/arm64-v8a/*.so"
-//        }
-//    }
 }
-
-//fataar {
-//    /**
-//     * If transitive is true, local jar module and remote library's dependencies will be embed.
-//     * If transitive is false, just embed first level dependency
-//     * Local aar project does not support transitive, always embed first level
-//     * Default value is false
-//     * @since 1.3.0
-//     */
-//    transitive = true
-//}
-
-//allprojects {
-//    repositories {
-//        google()
-//        mavenCentral()
-//        maven( "https://identy.jfrog.io/identy/identy-face-release") {
-//            credentials {
-//                username = "barnksfortegroup"
-//                password = "cHv16Vt%8fYG8j^4*xcT3"
-//            }
-//        }
-//        maven( "https://identy.jfrog.io/identy/identy-finger-release") {
-//            credentials {
-//                username = "barnksfortegroup"
-//                password = "cHv16Vt%8fYG8j^4*xcT3"
-//            }
-//        }
-//        maven( "https://identy.jfrog.io/identy/identy-ocr-release") {
-//            credentials {
-//                username = "barnksfortegroup"
-//                password = "cHv16Vt%8fYG8j^4*xcT3"
-//            }
-//        }
-//        maven("https://dl.bintray.com/guardian/android")
-//        maven ("https://jitpack.io")
-//        maven ("https://plugins.gradle.org/m2/")
-////        maven {
-////            setUrl("https://jitpack.io")
-////            content {
-////                includeGroup("com.github.aasitnikov")
-////            }
-////        }
-//    }
-//}
 
 dependencies {
 
@@ -143,24 +73,9 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-
-//    embed(group = "com.identy.app", name = "finger", version = "5.7.2", ext = "aar") {
-//       isTransitive = true
-//    }
-//    embed(group = "com.identy.face", name=  "face", version = "4.11.2", ext = "aar")
-//    embed(group = "com.identy.docscan", name = "ocr", version = "2.16.0", ext = "aar") {
-//
-//    }
-
-    api("com.identy.app:finger:5.7.2@aar"){
-        isTransitive = true // Ensure transitive dependencies are included
-    }
-    api("com.identy.face:face:4.11.2@aar"){
-        isTransitive = true // Ensure transitive dependencies are included
-    }
-    api("com.identy.docscan:ocr:2.16.0@aar"){
-        isTransitive = true // Ensure transitive dependencies are included
-    }
+    implementation("com.identy.app:finger:5.7.2@aar")
+    implementation("com.identy.face:face:4.11.2@aar")
+    implementation("com.identy.docscan:ocr:2.16.0@aar")
 
 //    implementation("com.github.kezong:fat-aar:1.3.8")
 }
@@ -173,13 +88,13 @@ afterEvaluate {
                 artifactId = "ToasterLibrary"
                 version = version
 
-//                afterEvaluate {
-//                    from(components["release"])
+                afterEvaluate {
+                    from(components["release"])
 //                    artifact(tasks.getByName("bundleReleaseAar"))
-//                }
-                artifact(tasks.getByName("bundleReleaseAar")) {
-                    builtBy(tasks.getByName("bundleReleaseAar"))
                 }
+//                artifact(tasks.getByName("bundleReleaseAar")) {
+//                    builtBy(tasks.getByName("bundleReleaseAar"))
+//                }
             }
         }
     }

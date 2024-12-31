@@ -27,23 +27,35 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven( "https://identy.jfrog.io/identy/identy-face-release") {
-            credentials {
-                username = "barnksfortegroup"
-                password = "cHv16Vt%8fYG8j^4*xcT3"
-            }
+//        maven( "https://identy.jfrog.io/identy/identy-face-release") {
+//            credentials {
+//                username = "barnksfortegroup"
+//                password = "cHv16Vt%8fYG8j^4*xcT3"
+//            }
+//        }
+//        maven( "https://identy.jfrog.io/identy/identy-finger-release") {
+//            credentials {
+//                username = "barnksfortegroup"
+//                password = "cHv16Vt%8fYG8j^4*xcT3"
+//            }
+//        }
+//        maven( "https://identy.jfrog.io/identy/identy-ocr-release") {
+//            credentials {
+//                username = "barnksfortegroup"
+//                password = "cHv16Vt%8fYG8j^4*xcT3"
+//            }
+//        }
+        maven {
+            url = uri("http://localhost:8081/nexus/content/repositories/verxid-face/")
+            isAllowInsecureProtocol = true
         }
-        maven( "https://identy.jfrog.io/identy/identy-finger-release") {
-            credentials {
-                username = "barnksfortegroup"
-                password = "cHv16Vt%8fYG8j^4*xcT3"
-            }
+        maven {
+            url = uri("http://localhost:8081/nexus/content/repositories/verxid-finger/")
+            isAllowInsecureProtocol = true
         }
-        maven( "https://identy.jfrog.io/identy/identy-ocr-release") {
-            credentials {
-                username = "barnksfortegroup"
-                password = "cHv16Vt%8fYG8j^4*xcT3"
-            }
+        maven {
+            url = uri("http://localhost:8081/nexus/content/repositories/verxid-ocr/")
+            isAllowInsecureProtocol = true
         }
         maven("https://dl.bintray.com/guardian/android")
         maven ("https://jitpack.io")
