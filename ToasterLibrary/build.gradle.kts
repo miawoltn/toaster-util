@@ -9,7 +9,7 @@ plugins {
 
 
 group = "com.github.miawoltn"
-version = "0.1.24"
+version = "0.1.25"
 
 android {
     namespace = "com.miawoltn.toasterlibrary"
@@ -76,7 +76,7 @@ dependencies {
     implementation("com.identy.app:finger:5.7.2@aar")
     implementation("com.identy.face:face:4.11.2@aar")
     implementation("com.identy.docscan:ocr:2.16.0@aar")
-    implementation("com.identy.face.localmatcher:face_local_matcher: 4.11.0@aar")
+    implementation("com.identy.face.localmatcher:face_local_matcher:4.11.0@aar")
 
 //    implementation("com.github.kezong:fat-aar:1.3.8")
 }
