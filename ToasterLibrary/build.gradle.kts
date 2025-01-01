@@ -8,7 +8,7 @@ plugins {
 
 
 group = "com.github.miawoltn"
-version = "0.1.30"
+version = "0.1.31"
 
 android {
     namespace = "com.miawoltn.toasterlibrary"
@@ -79,6 +79,7 @@ dependencies {
     implementation(group = "com.identy.face", name= "face", version= "5.2.0", ext= "aar")
     implementation(group = "com.identy.face.icao", name= "face_icao", version= "4.12.1", ext= "aar")
     implementation(group = "com.identy.face.localmatcher", name = "face_local_matcher", version = "4.12.0", ext = "aar")
+    implementation(group = "com.identy.face", name= "face_liveness", version= "5.2.0", ext= "aar")
 
     /* SDK additional libraries required */
     implementation("com.vmadalin:easypermissions-ktx:1.0.0")

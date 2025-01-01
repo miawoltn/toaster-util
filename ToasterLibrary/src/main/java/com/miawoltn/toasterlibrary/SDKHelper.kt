@@ -196,6 +196,7 @@ class SDKHelper private constructor(private var activity: Activity) {
                                     displayResult(displayResult)
                                     displayImages = displayImages
                                     setRequiredTemplates(faceTemplates)
+
 //                                    setASSecLevel(AS.MEDIUM)
 //                            enableBackgroundRemoval()
                                     val match = IdentyFaceLocalMatch()
