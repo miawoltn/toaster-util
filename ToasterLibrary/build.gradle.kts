@@ -8,7 +8,7 @@ plugins {
 
 
 group = "com.github.miawoltn"
-version = "0.1.26"
+version = "0.1.27"
 
 android {
     namespace = "com.miawoltn.toasterlibrary"

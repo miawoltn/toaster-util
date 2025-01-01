@@ -129,9 +129,9 @@ class SDKHelper private constructor(private var activity: Activity) {
 //                else -> Hand.LEFT
 //            }
 //        }
-//        fun getInstance(activity: Activity): SDKHelper {
-//            return SDKHelper(activity)
-//        }
+        fun getInstance(activity: Activity): SDKHelper {
+            return SDKHelper(activity)
+        }
     }
 
     /*==================================== Face ==========================================*/
