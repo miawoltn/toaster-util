@@ -27,24 +27,6 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-//        maven( "https://identy.jfrog.io/identy/identy-face-release") {
-//            credentials {
-//                username = "barnksfortegroup"
-//                password = "cHv16Vt%8fYG8j^4*xcT3"
-//            }
-//        }
-//        maven( "https://identy.jfrog.io/identy/identy-finger-release") {
-//            credentials {
-//                username = "barnksfortegroup"
-//                password = "cHv16Vt%8fYG8j^4*xcT3"
-//            }
-//        }
-//        maven( "https://identy.jfrog.io/identy/identy-ocr-release") {
-//            credentials {
-//                username = "barnksfortegroup"
-//                password = "cHv16Vt%8fYG8j^4*xcT3"
-//            }
-//        }
         maven {
             url = uri("https://a146-169-150-218-73.ngrok-free.app/nexus/content/repositories/verxid-face/")
         }

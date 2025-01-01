@@ -3,13 +3,12 @@ import org.gradle.internal.impldep.org.junit.experimental.categories.Categories.
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id("com.kezong.fat-aar")
     id("maven-publish")
 }
 
 
 group = "com.github.miawoltn"
-version = "0.1.25"
+version = "0.1.26"
 
 android {
     namespace = "com.miawoltn.toasterlibrary"
@@ -73,12 +72,25 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-    implementation("com.identy.app:finger:5.7.2@aar")
-    implementation("com.identy.face:face:4.11.2@aar")
-    implementation("com.identy.docscan:ocr:2.16.0@aar")
-    implementation("com.identy.face.localmatcher:face_local_matcher:4.11.0@aar")
+    // also, if using ICAO, enrollment, verification or match funcionality, you need to
+    // import either face_icao or face_local_matcher as explained below
+    implementation("com.identy.face:face:5.1.0@aar")
+    implementation("com.identy.face:face_liveness:5.2.0@aar")
+    implementation("com.identy.face.localmatcher:face_local_matcher:4.12.0@aar")
+    implementation("com.identy.face.icao:face_icao:4.12.1@aar")
+    implementation("com.vmadalin:easypermissions-ktx:1.0.0")
 
-//    implementation("com.github.kezong:fat-aar:1.3.8")
+    /* SDK additional libraries required */
+    implementation("com.android.volley:volley:1.2.1")
+    val room_version = "1.1.0"
+    implementation("android.arch.persistence.room:runtime:$room_version")
+    annotationProcessor("android.arch.persistence.room:compiler:$room_version")
+    compileOnly("android.arch.lifecycle:livedata:1.1.1") {
+        isForce = true;
+    }
+    compileOnly("android.arch.lifecycle:viewmodel:1.1.1") {
+        isForce = true;
+    }
 }
 
 afterEvaluate {
