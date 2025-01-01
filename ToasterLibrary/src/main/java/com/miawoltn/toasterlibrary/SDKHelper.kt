@@ -196,6 +196,7 @@ class SDKHelper private constructor(private var activity: Activity) {
                                     displayResult(displayResult)
                                     displayImages = displayImages
                                     setRequiredTemplates(faceTemplates)
+                                    disableTraining()
 
 //                                    setASSecLevel(AS.MEDIUM)
 //                            enableBackgroundRemoval()
