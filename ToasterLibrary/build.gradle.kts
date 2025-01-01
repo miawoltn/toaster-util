@@ -8,7 +8,7 @@ plugins {
 
 
 group = "com.github.miawoltn"
-version = "0.1.28"
+version = "0.1.29"
 
 android {
     namespace = "com.miawoltn.toasterlibrary"
@@ -64,10 +64,8 @@ android {
 }
 
 dependencies {
-
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -84,16 +82,16 @@ dependencies {
 
     /* SDK additional libraries required */
     implementation("com.vmadalin:easypermissions-ktx:1.0.0")
-    implementation("com.android.volley:volley:1.2.1")
-    val room_version = "1.1.0"
-    implementation("android.arch.persistence.room:runtime:$room_version")
-    annotationProcessor("android.arch.persistence.room:compiler:$room_version")
-    compileOnly("android.arch.lifecycle:livedata:1.1.1") {
-        isForce = true;
-    }
-    compileOnly("android.arch.lifecycle:viewmodel:1.1.1") {
-        isForce = true;
-    }
+//    implementation("com.android.volley:volley:1.2.1")
+//    val room_version = "2.6.1"
+//    implementation("android.arch.persistence.room:runtime:$room_version")
+//    annotationProcessor("android.arch.persistence.room:compiler:$room_version")
+//    compileOnly("android.arch.lifecycle:livedata:1.1.1") {
+//        isForce = true;
+//    }
+//    compileOnly("android.arch.lifecycle:viewmodel:1.1.1") {
+//        isForce = true;
+//    }
 }
 
 afterEvaluate {
