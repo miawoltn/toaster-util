@@ -8,7 +8,7 @@ plugins {
 
 
 group = "com.github.miawoltn"
-version = "0.1.27"
+version = "0.1.28"
 
 android {
     namespace = "com.miawoltn.toasterlibrary"
@@ -74,13 +74,16 @@ dependencies {
 
     // also, if using ICAO, enrollment, verification or match funcionality, you need to
     // import either face_icao or face_local_matcher as explained below
-    implementation("com.identy.face:face:5.1.0@aar")
-    implementation("com.identy.face:face_liveness:5.2.0@aar")
-    implementation("com.identy.face.localmatcher:face_local_matcher:4.12.0@aar")
-    implementation("com.identy.face.icao:face_icao:4.12.1@aar")
-    implementation("com.vmadalin:easypermissions-ktx:1.0.0")
+//    implementation("com.identy.face:face:5.1.0@aar")
+//    implementation("com.identy.face:face_liveness:5.2.0@aar")
+//    implementation("com.identy.face.localmatcher:face_local_matcher:4.12.0@aar")
+//    implementation("com.identy.face.icao:face_icao:4.12.1@aar")
+    implementation(group = "com.identy.face", name= "face", version= "5.2.0", ext= "aar")
+    implementation(group = "com.identy.face.icao", name= "face_icao", version= "4.12.1", ext= "aar")
+    implementation(group = "com.identy.face.localmatcher", name = "face_local_matcher", version = "4.12.0", ext = "aar")
 
     /* SDK additional libraries required */
+    implementation("com.vmadalin:easypermissions-ktx:1.0.0")
     implementation("com.android.volley:volley:1.2.1")
     val room_version = "1.1.0"
     implementation("android.arch.persistence.room:runtime:$room_version")
